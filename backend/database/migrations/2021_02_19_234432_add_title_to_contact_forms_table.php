@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddTitleToContacetFormsTable extends Migration
+class AddTitleToContactFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddTitleToContacetFormsTable extends Migration
      */
     public function up()
     {
-        Schema::table('contacet_forms', function (Blueprint $table) {
+        Schema::table('contact_forms', function (Blueprint $table) {
             $table->string('title', 50)->after('your_name');
         });
     }
@@ -25,7 +25,7 @@ class AddTitleToContacetFormsTable extends Migration
      */
     public function down()
     {
-        Schema::table('contacet_forms', function (Blueprint $table) {
+        Schema::table('contact_forms', function (Blueprint $table) {
             $table->dropColumn('title');
         });
     }
